@@ -1,0 +1,31 @@
+.navbar{
+    background-color: #74b9ff;
+}
+
+.news{
+    border: 3px solid #74b9ff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.image-container{
+    text-align: center;
+}
+
+.news-image{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.news-description{
+    font-size: 20px;
+    text-align: justify;
+    color: #424b4f;
+}
+
+.footer{
+    background-color: #74b9ff;
+    height: 50px;
+}
