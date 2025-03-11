@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Cricket Score</title>
+
+    <link rel="stylesheet" href="styles/home.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand" aria-label="Seventh navbar example">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white" href="home.html">Live Cricket Score</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl"
+            aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+    
+          <div class="collapse navbar-collapse" id="navbarsExampleXxl">
+            <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+              <li class="nav-item">
+                <a class="nav-link active text-white" aria-current="page" href="home.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="overview.html">Live Score</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">Schedules</a>
+              </li>
+            </ul>
+            <div class="d-flex align-items-center justify-content-between">
+              <a href="player/login.html" class="btn btn-outline-primary">Player Login</a>
+              <a href="login.html" class="btn btn-outline-primary">Admin Login</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <!-- Match Summary -->
+    <div class="card m-2">
+        <div class="card-header bg-primary text-white">
+            <h2>
+                India vs New Zealand, Final - Live Cricket Score
+            </h2>
+            <p class="mb-0">ICC World Cup 2025 - Narendra Modi Stadium, Ahmedabad - March 11, 2025</p>
+        </div>
+        <div class="card-body">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h4>Match Summary</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <h5 class="mb-0">India</h5>
+                                <h5 class="mb-0 text-success">254/6 (49.0)</h5>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h5 class="mb-0">New Zealand</h5>
+                                <h5 class="mb-0">251/7 (50.0)</h5>
+                            </div>
+                            <hr>
+                            <p class="text-center text-success fw-bold">India won by 4 wickets</p>
+                            <p class="text-center">Player of the Match: Virat Kohli (89 runs off 87 balls)</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header bg-light">
+                            <h4>Current Partnership</h4>
+                        </div>
+                        <div class="card-body">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Batsman</th>
+                                        <th>Runs</th>
+                                        <th>Balls</th>
+                                        <th>SR</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Hardik Pandya*</td>
+                                        <td>37</td>
+                                        <td>28</td>
+                                        <td>132.14</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Ravindra Jadeja*</td>
+                                        <td>29</td>
+                                        <td>24</td>
+                                        <td>120.83</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <p class="text-center">Partnership: 66 runs in 52 balls</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wickets Table -->
+            <h3 class="mb-3">Wickets</h3>
+            <table class="table table-hover">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Wicket</th>
+                        <th scope="col">Over</th>
+                        <th scope="col">Score</th>
+                        <th scope="col">Player</th>
+                        <th scope="col">Bowler</th>
+                        <th scope="col">Dismissal Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>4.1</td>
+                        <td>27</td>
+                        <td>Rohit Sharma</td>
+                        <td>Trent Boult</td>
+                        <td>Caught</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>12.3</td>
+                        <td>61</td>
+                        <td>Shubman Gill</td>
+                        <td>Mitchell Santner</td>
+                        <td>LBW</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>22.5</td>
+                        <td>124</td>
+                        <td>Shreyas Iyer</td>
+                        <td>Lockie Ferguson</td>
+                        <td>Bowled</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>33.2</td>
+                        <td>168</td>
+                        <td>Virat Kohli</td>
+                        <td>Tim Southee</td>
+                        <td>Caught</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>36.4</td>
+                        <td>179</td>
+                        <td>Rishabh Pant</td>
+                        <td>Mitchell Santner</td>
+                        <td>Stumped</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>39.1</td>
+                        <td>188</td>
+                        <td>KL Rahul</td>
+                        <td>Trent Boult</td>
+                        <td>Caught & Bowled</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Batting Stats -->
+            <h3 class="mb-3 mt-4">India Batting</h3>
+            <table class="table table-hover">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Batsman</th>
+                        <th scope="col">Runs</th>
+                        <th scope="col">Balls</th>
+                        <th scope="col">4s</th>
+                        <th scope="col">6s</th>
+                        <th scope="col">SR</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Rohit Sharma c Conway b Boult</td>
+                        <td>21</td>
+                        <td>19</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>110.53</td>
+                    </tr>
+                    <tr>
+                        <td>Shubman Gill lbw b Santner</td>
+                        <td>35</td>
+                        <td>42</td>
+                        <td>4</td>
+                        <td>0</td>
+                        <td>83.33</td>
+                    </tr>
+                    <tr>
+                        <td>Virat Kohli c Latham b Southee</td>
+                        <td>89</td>
+                        <td>87</td>
+                        <td>8</td>
+                        <td>2</td>
+                        <td>102.30</td>
+                    </tr>
+                    <tr>
+                        <td>Shreyas Iyer b Ferguson</td>
+                        <td>24</td>
+                        <td>31</td>
+                        <td>2</td>
+                        <td>0</td>
+                        <td>77.42</td>
+                    </tr>
+                    <tr>
+                        <td>Rishabh Pant st Latham b Santner</td>
+                        <td>19</td>
+                        <td>23</td>
+                        <td>1</td>
+                        <td>1</td>
+                        <td>82.61</td>
+                    </tr>
+                    <tr>
+                        <td>KL Rahul c & b Boult</td>
+                        <td>0</td>
+                        <td>3</td>
+                        <td>0</td>
+                        <td>0</td>
+                        <td>0.00</td>
+                    </tr>
+                    <tr>
+                        <td>Hardik Pandya not out</td>
+                        <td>37</td>
+                        <td>28</td>
+                        <td>3</td>
+                        <td>2</td>
+                        <td>132.14</td>
+                    </tr>
+                    <tr>
+                        <td>Ravindra Jadeja not out</td>
+                        <td>29</td>
+                        <td>24</td>
+                        <td>3</td>
+                        <td>1</td>
+                        <td>120.83</td>
+                    </tr>
+                    <tr class="table-light">
+                        <td>Extras</td>
+                        <td colspan="5">0nb 2w 3lb 5b</td>
+                    </tr>
+                    <tr class="table-secondary">
+                        <td><strong>Total</strong></td>
+                        <td colspan="5"><strong>254/6</strong> (49.0 Overs, RR: 5.18)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Bowling Stats -->
+            <h3 class="mb-3 mt-4">New Zealand Bowling</h3>
+            <table class="table table-hover">
+                <thead class="table-primary">
+                    <tr>
+                        <th scope="col">Bowler</th>
+                        <th scope="col">Overs</th>
+                        <th scope="col">Maidens</th>
+                        <th scope="col">Runs</th>
+                        <th scope="col">Wickets</th>
+                        <th scope="col">Economy</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Trent Boult</td>
+                        <td>10.0</td>
+                        <td>0</td>
+                        <td>51</td>
+                        <td>2</td>
+                        <td>5.10</td>
+                    </tr>
+                    <tr>
+                        <td>Tim Southee</td>
+                        <td>10.0</td>
+                        <td>0</td>
+                        <td>55</td>
+                        <td>1</td>
+                        <td>5.50</td>
+                    </tr>
+                    <tr>
+                        <td>Lockie Ferguson</td>
+                        <td>9.0</td>
+                        <td>0</td>
+                        <td>53</td>
+                        <td>1</td>
+                        <td>5.89</td>
+                    </tr>
+                    <tr>
+                        <td>Mitchell Santner</td>
+                        <td>10.0</td>
+                        <td>0</td>
+                        <td>42</td>
+                        <td>2</td>
+                        <td>4.20</td>
+                    </tr>
+                    <tr>
+                        <td>Jimmy Neesham</td>
+                        <td>6.0</td>
+                        <td>0</td>
+                        <td>32</td>
+                        <td>0</td>
+                        <td>5.33</td>
+                    </tr>
+                    <tr>
+                        <td>Rachin Ravindra</td>
+                        <td>4.0</td>
+                        <td>0</td>
+                        <td>21</td>
+                        <td>0</td>
+                        <td>5.25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="card-footer">
+            <div class="row">
+                <div class="col-md-6">
+                    <h4>Match Details</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Venue: Narendra Modi Stadium, Ahmedabad</li>
+                        <li class="list-group-item">Date: March 11, 2025</li>
+                        <li class="list-group-item">Toss: New Zealand, elected to bat first</li>
+                        <li class="list-group-item">Umpires: Richard Kettleborough, Kumar Dharmasena</li>
+                        <li class="list-group-item">Match Referee: Ranjan Madugalle</li>
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <h4>Series Information</h4>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Tournament: ICC World Cup 2025</li>
+                        <li class="list-group-item">Match: Final</li>
+                        <li class="list-group-item">Result: India won by 4 wickets</li>
+                        <li class="list-group-item">Player of the Match: Virat Kohli</li>
+                        <li class="list-group-item">Player of the Tournament: Rohit Sharma</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer mt-4 py-3">
+        <div class="container text-center text-white">
+            <p class="mb-0"> 2025 Live Cricket Score. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
