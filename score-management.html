@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Management | Cricket Score</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background-color: #343a40;
+        }
+        .sidebar .nav-link {
+            color: rgba(255,255,255,.75);
+            padding: 0.75rem 1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .sidebar .nav-link:hover {
+            color: rgba(255,255,255,1);
+            background-color: rgba(255,255,255,.1);
+        }
+        .sidebar .nav-link.active {
+            color: white;
+            background-color: #0d6efd;
+        }
+        .sidebar .nav-link i {
+            margin-right: 0.5rem;
+        }
+        .match-card {
+            transition: transform 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .match-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand" aria-label="Seventh navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Live Cricket Score</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl"
+                aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleXxl">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="overview.html">Live Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Schedules</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="text-center mb-4">
+                        <h5 class="text-white">Admin Panel</h5>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-management.html">
+                                <i class="bi bi-person-badge"></i> Admin Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="player-list.html">
+                                <i class="bi bi-people"></i> Player Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="match-list.html">
+                                <i class="bi bi-trophy"></i> Match Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="score-management.html">
+                                <i class="bi bi-clipboard-data"></i> Score Management
+                            </a>
+                        </li>
+                        <li class="nav-item mt-4">
+                            <a class="nav-link text-danger" href="login.html">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Score Management</h1>
+                </div>
+
+                <!-- Live Matches -->
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">
+                        <h5 class="mb-0">Live Matches</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card match-card border-info">
+                                    <div class="card-header bg-info text-white">
+                                        <h5 class="mb-0">Pakistan vs South Africa</h5>
+                                        <small>ICC World Cup 2025 - National Stadium, Karachi</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <h6>Pakistan</h6>
+                                                <p class="mb-0">187/5 (35.2 overs)</p>
+                                            </div>
+                                            <div>
+                                                <h6>South Africa</h6>
+                                                <p class="mb-0">Yet to bat</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-center mb-0"><strong>Current Run Rate:</strong> 5.29</p>
+                                        <div class="d-grid gap-2 mt-3">
+                                            <a href="score-entry.html?match=M003" class="btn btn-info">Update Score</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card match-card border-info">
+                                    <div class="card-header bg-info text-white">
+                                        <h5 class="mb-0">Australia vs England</h5>
+                                        <small>The Ashes 2025 - Sydney Cricket Ground</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <h6>Australia</h6>
+                                                <p class="mb-0">245 all out (78.3 overs)</p>
+                                            </div>
+                                            <div>
+                                                <h6>England</h6>
+                                                <p class="mb-0">156/4 (52.1 overs)</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-center mb-0"><strong>Day 2 of 5</strong></p>
+                                        <div class="d-grid gap-2 mt-3">
+                                            <a href="score-entry.html?match=M006" class="btn btn-info">Update Score</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Upcoming Matches -->
+                <div class="card mb-4">
+                    <div class="card-header bg-secondary text-white">
+                        <h5 class="mb-0">Upcoming Matches</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card match-card">
+                                    <div class="card-header bg-secondary text-white">
+                                        <h5 class="mb-0">West Indies vs Sri Lanka</h5>
+                                        <small>ICC World Cup 2025 - Kensington Oval, Barbados</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-2"><strong>Date & Time:</strong> March 15, 2025, 18:30</p>
+                                        <p class="mb-2"><strong>Format:</strong> ODI (50 overs)</p>
+                                        <div class="d-grid gap-2 mt-3">
+                                            <a href="match-view.html?match=M004" class="btn btn-outline-secondary">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6 mb-4">
+                                <div class="card match-card">
+                                    <div class="card-header bg-secondary text-white">
+                                        <h5 class="mb-0">Bangladesh vs Afghanistan</h5>
+                                        <small>ICC World Cup 2025 - Shere Bangla Stadium, Dhaka</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="mb-2"><strong>Date & Time:</strong> March 18, 2025, 14:00</p>
+                                        <p class="mb-2"><strong>Format:</strong> ODI (50 overs)</p>
+                                        <div class="d-grid gap-2 mt-3">
+                                            <a href="match-view.html?match=M005" class="btn btn-outline-secondary">View Details</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Completed Matches -->
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">
+                        <h5 class="mb-0">Recent Completed Matches</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6 mb-4">
+                                <div class="card match-card">
+                                    <div class="card-header bg-success text-white">
+                                        <h5 class="mb-0">India vs New Zealand</h5>
+                                        <small>ICC World Cup 2025 - Narendra Modi Stadium, Ahmedabad</small>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <div>
+                                                <h6>India</h6>
+                                                <p class="mb-0">254/6 (49.0 overs)</p>
+                                            </div>
+                                            <div>
+                                                <h6>New Zealand</h6>
+                                                <p class="mb-0">251/7 (50.0 overs)</p>
+                                            </div>
+                                        </div>
+                                        <p class="text-center mb-0"><strong>Result:</strong> India won by 4 wickets</p>
+                                        <div class="d-grid gap-2 mt-3">
+                                            <a href="match-view.html?match=M001" class="btn btn-outline-success">View Scorecard</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

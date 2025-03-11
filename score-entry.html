@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Entry | Cricket Score</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        .sidebar {
+            min-height: 100vh;
+            background-color: #343a40;
+        }
+        .sidebar .nav-link {
+            color: rgba(255,255,255,.75);
+            padding: 0.75rem 1rem;
+            border-radius: 0.25rem;
+            margin-bottom: 0.25rem;
+        }
+        .sidebar .nav-link:hover {
+            color: rgba(255,255,255,1);
+            background-color: rgba(255,255,255,.1);
+        }
+        .sidebar .nav-link.active {
+            color: white;
+            background-color: #0d6efd;
+        }
+        .sidebar .nav-link i {
+            margin-right: 0.5rem;
+        }
+        .action-btn {
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand" aria-label="Seventh navbar example">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="#">Live Cricket Score</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExampleXxl"
+                aria-controls="navbarsExampleXxl" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarsExampleXxl">
+                <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="overview.html">Live Score</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Schedules</a>
+                    </li>
+                </ul>
+                <div>
+                    <ul class="navbar-nav me-auto mb-2 mb-xl-0">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="page" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-3 col-lg-2 d-md-block sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <div class="text-center mb-4">
+                        <h5 class="text-white">Admin Panel</h5>
+                    </div>
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link" href="admin-management.html">
+                                <i class="bi bi-person-badge"></i> Admin Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="player-list.html">
+                                <i class="bi bi-people"></i> Player Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="match-list.html">
+                                <i class="bi bi-trophy"></i> Match Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="score-management.html">
+                                <i class="bi bi-clipboard-data"></i> Score Management
+                            </a>
+                        </li>
+                        <li class="nav-item mt-4">
+                            <a class="nav-link text-danger" href="login.html">
+                                <i class="bi bi-box-arrow-right"></i> Logout
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Score Entry</h1>
+                    <div class="btn-toolbar mb-2 mb-md-0">
+                        <a href="score-management.html" class="btn btn-secondary">
+                            Back to Score Management
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Match Info -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Match Information</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4>Pakistan vs South Africa</h4>
+                                <p class="mb-1"><strong>Tournament:</strong> ICC World Cup 2025</p>
+                                <p class="mb-1"><strong>Venue:</strong> National Stadium, Karachi</p>
+                                <p class="mb-1"><strong>Date & Time:</strong> March 12, 2025, 15:00</p>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="alert alert-info">
+                                    <h5 class="alert-heading">Match Status: <span class="badge bg-info">Live</span></h5>
+                                    <p class="mb-1"><strong>Toss:</strong> Pakistan won the toss and elected to bat</p>
+                                    <p class="mb-1"><strong>Current Score:</strong> Pakistan 187/5 (35.2 overs)</p>
+                                    <p class="mb-0"><strong>Current Run Rate:</strong> 5.29</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Score Actions -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Quick Score Actions</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <div class="mb-3">
+                            <button class="btn btn-outline-primary action-btn">0</button>
+                            <button class="btn btn-outline-primary action-btn">1</button>
+                            <button class="btn btn-outline-primary action-btn">2</button>
+                            <button class="btn btn-outline-primary action-btn">3</button>
+                            <button class="btn btn-outline-primary action-btn">4</button>
+                            <button class="btn btn-outline-primary action-btn">6</button>
+                        </div>
+                        <div class="mb-3">
+                            <button class="btn btn-outline-danger action-btn">W</button>
+                            <button class="btn btn-outline-warning action-btn">WD</button>
+                            <button class="btn btn-outline-warning action-btn">NB</button>
+                            <button class="btn btn-outline-warning action-btn">B</button>
+                            <button class="btn btn-outline-warning action-btn">LB</button>
+                        </div>
+                        <div class="alert alert-success">
+                            <h5>Current Ball: <span id="currentBall">35.2</span></h5>
+                            <h5>Last Action: <span id="lastAction">1 run</span></h5>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Batting Team -->
+                <div class="row mb-4">
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-success text-white">
+                                <h5 class="mb-0">Pakistan Batting</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Batsman</th>
+                                                <th>R</th>
+                                                <th>B</th>
+                                                <th>4s</th>
+                                                <th>6s</th>
+                                                <th>SR</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-primary">
+                                                <td>Babar Azam*</td>
+                                                <td>78</td>
+                                                <td>85</td>
+                                                <td>8</td>
+                                                <td>1</td>
+                                                <td>91.76</td>
+                                            </tr>
+                                            <tr class="table-primary">
+                                                <td>Mohammad Rizwan*</td>
+                                                <td>42</td>
+                                                <td>50</td>
+                                                <td>3</td>
+                                                <td>0</td>
+                                                <td>84.00</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-header bg-danger text-white">
+                                <h5 class="mb-0">South Africa Bowling</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Bowler</th>
+                                                <th>O</th>
+                                                <th>M</th>
+                                                <th>R</th>
+                                                <th>W</th>
+                                                <th>Econ</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr class="table-primary">
+                                                <td>Kagiso Rabada*</td>
+                                                <td>7.2</td>
+                                                <td>0</td>
+                                                <td>42</td>
+                                                <td>2</td>
+                                                <td>5.73</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wickets -->
+                <div class="card mb-4">
+                    <div class="card-header bg-danger text-white">
+                        <h5 class="mb-0">Wickets</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Wicket</th>
+                                        <th>Over</th>
+                                        <th>Score</th>
+                                        <th>Player</th>
+                                        <th>Bowler</th>
+                                        <th>Dismissal Type</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>4.3</td>
+                                        <td>27</td>
+                                        <td>Imam-ul-Haq</td>
+                                        <td>Kagiso Rabada</td>
+                                        <td>Caught</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Match Controls -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="mb-0">Match Controls</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <button class="btn btn-success btn-lg me-2">End Over</button>
+                        <button class="btn btn-warning btn-lg me-2">End Innings</button>
+                        <button class="btn btn-danger btn-lg">End Match</button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
